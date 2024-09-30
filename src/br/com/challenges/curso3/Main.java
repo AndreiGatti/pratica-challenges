@@ -2,6 +2,7 @@ package br.com.challenges.curso3;
 
 import br.com.challenges.curso3.model.Person;
 import br.com.challenges.curso3.model.Product;
+import br.com.challenges.curso3.model.ProductPerishable;
 
 import java.util.ArrayList;
 
@@ -30,11 +31,24 @@ public class Main {
         Product product1 = new Product("Sabão", 15.99 , 5);
         Product product2 = new Product("Detergente", 10.49, 8);
 
+        Product newProduct = new Product("Novo Produto", 15.99, 3);
+        /*System.out.println(newProduct);*/
+
+        ProductPerishable productPerishable  = new ProductPerishable("Produto C", 12.75, 2, "2023-12-31");
+        System.out.println(productPerishable);
+
         productsList.add(product1);
         productsList.add(product2);
+        productsList.add(newProduct);
+        productsList.add(productPerishable);
 
         System.out.println("Tamanho da lista: " + productsList.size());
         System.out.println("Produto na posição 0: " + productsList.get(0).getName());
+
+        for (Product product : productsList) {
+            System.out.println(product);
+        }
+
 
     }
 
